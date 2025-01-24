@@ -1,31 +1,20 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
 import React from "react";
 
 const Header = () => {
   return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        justifyContent: "center",
-        gap: "2rem",
-        background: "rgba(255,255,255,0.75)",
-        padding: "1rem",
-        top: 0,
-        width: "100%",
-        zIndex: 10,
-      }}
-    >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#footer">Contact</a>
-    </div>
+    <header className="bg-gray-900 text-white p-4 fixed w-full z-10 shadow-lg">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">Sumedh Chavan</h1>
+        <nav>
+          <ul className="flex space-x-4">
+            <li><a href="#home" className="hover:text-gray-400">Home</a></li>
+            <li><a href="#about" className="hover:text-gray-400">About</a></li>
+            <li><a href="#projects" className="hover:text-gray-400">Projects</a></li>
+            <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 
